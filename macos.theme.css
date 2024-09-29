@@ -71,8 +71,8 @@
 
 	/* macOS icon URLs */
 	--discord-icon: none; /* hide Discord icon */
-	--moon-icon: block; /* moon icon */
-	--moon-icon-url: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_moon.svg'); /* custom icon url */
+	--moon-icon: none; /* moon icon */
+	--moon-icon-url: url('https://icons.veryicon.com/png/o/miscellaneous/apple-series/macos-2.png'); /* custom icon url */
 	--moon-icon-size: auto;
 
 	/* filter uncolorable elements to fit theme */
