@@ -1,0 +1,135 @@
+/**
+ * @name macOS
+ * @description A macOS-inspired dark theme for Discord.
+ * @author YourName
+ * @version 1.0.0
+ * @invite yourInviteCode
+ * @website yourWebsiteLink
+ * @source yourSourceLink
+*/
+
+/* IMPORTANT: make sure to enable dark mode in discord settings for the theme to apply properly!!! */
+
+	@import url('https://refact0r.github.io/midnight-discord/midnight.css');
+
+/* customize things here */
+:root {
+	/* font, change to 'gg sans' for default discord font*/
+	--font: 'Figtree', sans-serif;
+
+	/* top left corner text */
+	--corner-text: 'macOS Inspired';
+
+	/* color of status indicators and window controls */
+	--online-indicator: #00B300; /* macOS green */
+	--dnd-indicator: #FF3B30; /* macOS red */
+	--idle-indicator: #FFA500; /* macOS yellow */
+	--streaming-indicator: #5856D6; /* macOS purple */
+
+	/* accent colors */
+	--accent-1: #007AFF; /* links */
+	--accent-2: #007AFF; /* general unread/mention elements */
+	--accent-3: #008CFF; /* accent buttons */
+	--accent-4: #0051A8; /* accent buttons when hovered */
+	--accent-5: #003D66; /* accent buttons when clicked */
+	--mention: rgba(0, 122, 255, 0.1); /* mentions & mention messages */
+	--mention-hover: rgba(0, 122, 255, 0.2); /* mentions & mention messages when hovered */
+
+	/* text colors */
+	--text-0: white; /* text on colored elements */
+	--text-1: var(--text-2); /* other normally white text */
+	--text-2: hsl(220, 25%, 80%); /* headings and important text */
+	--text-3: hsl(220, 15%, 70%); /* normal text */
+	--text-4: hsl(220, 15%, 50%); /* icon buttons and channels */
+	--text-5: hsl(220, 15%, 30%); /* muted channels/chats and timestamps */
+
+	/* background and dark colors */
+	--bg-1: hsl(220, 15%, 25%); /* dark buttons when clicked */
+	--bg-2: hsl(220, 15%, 20%); /* dark buttons */
+	--bg-3: hsl(220, 15%, 15%); /* spacing, secondary elements */
+	--bg-4: hsl(220, 15%, 10%); /* main background color */
+	--hover: hsla(230, 20%, 50%, 0.1); /* channels and buttons when hovered */
+	--active: hsla(220, 20%, 50%, 0.2); /* channels and buttons when clicked or selected */
+	--message-hover: hsla(220, 0%, 0%, 0.1); /* messages when hovered */
+
+	/* amount of spacing and padding */
+	--spacing: 12px;
+
+	/* animations */
+	--list-item-transition: 0.2s ease; /* channels/members/settings hover transition */
+	--unread-bar-transition: 0.2s ease; /* unread bar moving into view transition */
+	--moon-spin-transition: 0.4s ease; /* moon icon spin */
+	--icon-spin-transition: 1s ease; /* round icon button spin (settings, emoji, etc.) */
+
+	/* corner roundness (border-radius) */
+	--roundness-xl: 20px; /* roundness of big panel outer corners */
+	--roundness-l: 18px; /* popout panels */
+	--roundness-m: 14px; /* smaller panels, images, embeds */
+	--roundness-s: 10px; /* members, settings inputs */
+	--roundness-xs: 8px; /* channels, buttons */
+	--roundness-xxs: 6px; /* searchbar, small elements */
+
+	/* macOS icon URLs */
+	--discord-icon: none; /* hide Discord icon */
+	--moon-icon: block; /* moon icon */
+	--moon-icon-url: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_moon.svg'); /* custom icon url */
+	--moon-icon-size: auto;
+
+	/* filter uncolorable elements to fit theme */
+	--login-bg-filter: saturate(0.3) hue-rotate(-15deg) brightness(0.4); /* login background artwork */
+	--green-to-accent-3-filter: hue-rotate(56deg) saturate(1.43); /* add friend page explore icon */
+	--blurple-to-accent-3-filter: hue-rotate(304deg) saturate(0.84) brightness(1.2); /* add friend page school icon */
+}
+
+/* Custom button styles to mimic macOS */
+.button {
+	background-color: var(--accent-3);
+	border: none;
+	border-radius: var(--roundness-xs);
+	color: var(--text-0);
+	padding: var(--spacing) 20px;
+	transition: background-color 0.3s ease;
+}
+
+.button:hover {
+	background-color: var(--accent-4);
+}
+
+.button:active {
+	background-color: var(--accent-5);
+}
+
+/* Input styles */
+.input {
+	border: 1px solid var(--bg-2);
+	border-radius: var(--roundness-s);
+	padding: var(--spacing);
+	background-color: var(--bg-2);
+	color: var(--text-3);
+	transition: border 0.2s;
+}
+
+.input:focus {
+	border-color: var(--accent-2);
+}
+
+/* Message hover effect */
+.message:hover {
+	background-color: var(--message-hover);
+	border-radius: var(--roundness-s);
+}
+
+/* General animation for icons */
+.icon {
+	transition: transform 0.3s ease;
+}
+
+.icon:hover {
+	transform: scale(1.1);
+}
+
+/* Sidebar styles */
+.sidebar {
+	background-color: var(--bg-3);
+	border-right: 1px solid hsl(220, 15%, 30%);
+}
